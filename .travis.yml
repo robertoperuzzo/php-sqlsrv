@@ -9,14 +9,11 @@ env:
   - PHP73=7.3.15
   - PHP72=7.2.28
   matrix:
-  - PHP_VER="${PHP74}" TAGS=7.4,7,latest
-  - PHP_VER="${PHP73}" TAGS=7.3
+  - PHP_VER="${PHP73}" TAGS=7.3,7,latest
   - PHP_VER="${PHP72}" TAGS=7.2
-  - PHP_VER="${PHP74}" PHP_DEV=1 TAGS=7.4-dev,7-dev,dev
-  - PHP_VER="${PHP73}" PHP_DEV=1 TAGS=7.3-dev
+  - PHP_VER="${PHP73}" PHP_DEV=1 TAGS=7.3-dev,7-dev,dev
   - PHP_VER="${PHP72}" PHP_DEV=1 TAGS=7.2-dev
-  - PHP_VER="${PHP74}" PHP_DEV=1 WODBY_USER_ID=501 WODBY_GROUP_ID=20 TAGS=7.4-dev-macos,7-dev-macos,dev-macos
-  - PHP_VER="${PHP73}" PHP_DEV=1 WODBY_USER_ID=501 WODBY_GROUP_ID=20 TAGS=7.3-dev-macos
+  - PHP_VER="${PHP73}" PHP_DEV=1 WODBY_USER_ID=501 WODBY_GROUP_ID=20 TAGS=7.3-dev-macos,7-dev-macos,dev-macos
   - PHP_VER="${PHP72}" PHP_DEV=1 WODBY_USER_ID=501 WODBY_GROUP_ID=20 TAGS=7.2-dev-macos
 
 script:

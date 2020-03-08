@@ -23,6 +23,11 @@ init_ssh_client() {
     fi
 }
 
+init_git() {
+    git config --global user.email "${GIT_USER_EMAIL}"
+    git config --global user.name "${GIT_USER_NAME}"
+}
+
 init_sshd() {
     _gotpl "sshd_config.tmpl" "/etc/ssh/sshd_config"
 
@@ -48,7 +53,7 @@ init_sshd() {
 # @deprecated will be removed in favor of bind mounts (config maps).
 init_crond() {
     if [[ -n "${CRONTAB}" ]]; then
-        _gotpl "crontab.tmpl" "/etc/crontabs/www-data"
+        _gotpl "crontab.tmpl" "/etc/cron.d/www-data"
     fi
 }
 
@@ -70,14 +75,13 @@ process_templates() {
     _gotpl "docker-php-${php_ver_minor}.ini.tmpl" "${PHP_INI_DIR}/conf.d/docker-php.ini"
     _gotpl "docker-php-ext-apcu.ini.tmpl" "${PHP_INI_DIR}/conf.d/docker-php-ext-apcu.ini"
     _gotpl "docker-php-ext-igbinary.ini.tmpl" "${PHP_INI_DIR}/conf.d/docker-php-ext-igbinary.ini"
+    _gotpl "docker-php-ext-opcache-${php_ver_minor}.ini.tmpl" "${PHP_INI_DIR}/conf.d/docker-php-ext-opcache.ini"
     _gotpl "docker-php-ext-tideways_xhprof.ini.tmpl" "${PHP_INI_DIR}/conf.d/docker-php-ext-tideways_xhprof.ini"
     _gotpl "docker-php-ext-xdebug.ini.tmpl" "${PHP_INI_DIR}/conf.d/docker-php-ext-xdebug.ini"
-    _gotpl "docker-php-ext-opcache.ini.tmpl" "${PHP_INI_DIR}/conf.d/docker-php-ext-opcache.ini"
 
     _gotpl "zz-www.conf.tmpl" "/usr/local/etc/php-fpm.d/zz-www.conf"
     _gotpl "wodby.settings.php.tmpl" "${CONF_DIR}/wodby.settings.php"
     _gotpl "ssh_config.tmpl" "${ssh_dir}/config"
-    _gotpl "gitconfig.tmpl" "/etc/gitconfig"
 }
 
 disable_modules() {
@@ -101,12 +105,13 @@ disable_modules() {
 sudo init_container
 
 init_ssh_client
+init_git
 process_templates
 disable_modules
 
-if [[ "${@:1:2}" == "sudo /usr/sbin/sshd" ]]; then
+if [[ "${@:1:3}" == "sudo -E /usr/sbin/sshd" ]]; then
     init_sshd
-elif [[ "${@:1:3}" == "sudo -E crond" || "${@:1:4}" == "sudo -E LD_PRELOAD=/usr/lib/preloadable_libiconv.so crond" ]]; then
+elif [[ "${@:1:3}" == "sudo -E /usr/sbin/cron" ]]; then
     init_crond
 fi
 

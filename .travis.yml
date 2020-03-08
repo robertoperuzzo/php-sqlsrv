@@ -32,6 +32,6 @@ after_success:
 notifications:
   email:
     recipients:
-    - travisci@wodby.com
+    - travisci@robertoperuzzo.it
     on_success: never
     on_failure: always

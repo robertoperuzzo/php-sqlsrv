@@ -17,7 +17,7 @@ if [[ -n "${PHP_DEBUG}" ]]; then
     sed -i '/blackfire/d' ~/expected_modules
     sed -i '/newrelic/d' ~/expected_modules
 fi
-cat expected_modules
+cat ~/expected_modules
 if ! cmp -s ~/php_modules.tmp ~/expected_modules; then
     echo "Error. PHP modules are not identical."
     diff ~/php_modules.tmp ~/expected_modules

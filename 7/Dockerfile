@@ -57,6 +57,7 @@ RUN set -xe; \
         less \
         libbz2-1.0 \
         libc6 \
+        libc-bin \
         libc-client2007e \
         libevent-2.0-5 \
         libfcgi \
@@ -68,6 +69,7 @@ RUN set -xe; \
         libltdl7 \
         libmemcached11 \
         libmcrypt4 \
+        libpam-runtime \
         libpng16-16 \
         libxml2 \
         libyaml-0-2 \

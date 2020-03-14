@@ -24,6 +24,7 @@ ENV PATH="${PATH}:/home/wodby/.composer/vendor/bin:${APP_ROOT}/vendor/bin:${APP_
     GIT_USER_EMAIL="wodby@robertoperuzzo.it" \
     GIT_USER_NAME="wodby"
 
+SHELL ["/bin/bash", "-c"]
 RUN set -xe; \
     # Delete existing user/group if uid/gid occupied.
     existing_group=$(getent group "${WODBY_GROUP_ID}" | cut -d: -f1); \

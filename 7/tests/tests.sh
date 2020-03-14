@@ -6,7 +6,6 @@ if [[ -n "${DEBUG}" ]]; then
     set -x
 fi
 
-php -m
 php -m > ~/php_modules.tmp
 echo -n "Checking PHP modules... "
 

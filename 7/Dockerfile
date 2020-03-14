@@ -220,7 +220,6 @@ RUN set -xe; \
     apt-get install -y --no-install-recommends \
         blackfire-agent \
         blackfire-php; \
-    #docker-php-ext-enable blackfire; \
     \
     # Uploadprogress.
     mkdir -p /usr/src/php/ext/uploadprogress; \

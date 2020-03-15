@@ -24,6 +24,7 @@ ENV PATH="${PATH}:/home/wodby/.composer/vendor/bin:${APP_ROOT}/vendor/bin:${APP_
     GIT_USER_EMAIL="wodby@robertoperuzzo.it" \
     GIT_USER_NAME="wodby"
 
+SHELL ["/bin/bash", "-c"]
 RUN set -xe; \
     # Delete existing user/group if uid/gid occupied.
     existing_group=$(getent group "${WODBY_GROUP_ID}" | cut -d: -f1); \
@@ -56,6 +57,7 @@ RUN set -xe; \
         less \
         libbz2-1.0 \
         libc6 \
+        libc-bin \
         libc-client2007e \
         libevent-2.0-5 \
         libfcgi \
@@ -67,6 +69,7 @@ RUN set -xe; \
         libltdl7 \
         libmemcached11 \
         libmcrypt4 \
+        libpam-runtime \
         libpng16-16 \
         libxml2 \
         libyaml-0-2 \
@@ -220,7 +223,6 @@ RUN set -xe; \
     apt-get install -y --no-install-recommends \
         blackfire-agent \
         blackfire-php; \
-    #docker-php-ext-enable blackfire; \
     \
     # Uploadprogress.
     mkdir -p /usr/src/php/ext/uploadprogress; \

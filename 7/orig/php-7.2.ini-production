@@ -153,11 +153,6 @@
 ;   Development Value: Off
 ;   Production Value: Off
 
-; track_errors
-;   Default Value: Off
-;   Development Value: On
-;   Production Value: Off
-
 ; variables_order
 ;   Default Value: "EGPCS"
 ;   Development Value: "GPCS"
@@ -1004,7 +999,7 @@ cli_server.color = On
 ; the sqlite_dbpage virtual table.
 ; https://www.sqlite.org/c3ref/c_dbconfig_defensive.html
 ; (for older SQLite versions, this flag has no use)
-sqlite3.defensive = 1
+;sqlite3.defensive = 1
 
 [Pcre]
 ;PCRE library backtracking limit.

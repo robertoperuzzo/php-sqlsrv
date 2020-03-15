@@ -10,9 +10,8 @@ git_url=https://github.com/robertoperuzzo/php-sqlsrv.git
 
 wait_for_cron() {
     executed=0
-    docker_exec crond cat /mnt/files/cron | grep -q "test";
     for i in $(seq 1 13); do
-        if docker_exec crond cat /mnt/files/cron | grep -q "test"; then
+        if docker_exec crond pgrep cron; then
             executed=1
             break
         fi

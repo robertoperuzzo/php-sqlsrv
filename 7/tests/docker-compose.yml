@@ -34,7 +34,7 @@ services:
 
   crond:
     image: $IMAGE
-    command: sudo -E crond -f -d 0
+    command: sudo -E /usr/sbin/cron -f -L 8
     volumes:
       - ./crontab:/etc/crontabs/www-data
     depends_on:

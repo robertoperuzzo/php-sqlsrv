@@ -18,7 +18,7 @@ if [[ -n "${PHP_DEBUG}" ]]; then
 fi
 
 # Add blank line at the eof.
-sed -i -e '$a\' ~/expected_modules
+echo >> ~/expected_modules
 
 if ! cmp -s ~/php_modules.tmp ~/expected_modules; then
     echo "Error. PHP modules are not identical."

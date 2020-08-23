@@ -78,6 +78,7 @@ RUN set -xe; \
         make \
         mariadb-client \
         nano \
+        openssl \
         openssh-server \
         openssh-client \
         patch \

@@ -46,6 +46,7 @@ RUN set -xe; \
         ca-certificates \
         cmake \
         cron \
+        debconf \
         fcgiwrap \
         findutils \
         git \
@@ -71,6 +72,7 @@ RUN set -xe; \
         libmcrypt4 \
         libpam-runtime \
         libpng16-16 \
+        libssl1.1 \
         libxml2 \
         libyaml-0-2 \
         libzip4 \
@@ -78,9 +80,9 @@ RUN set -xe; \
         make \
         mariadb-client \
         nano \
-        openssl \
         openssh-server \
         openssh-client \
+        openssl \
         patch \
         pkg-config \
         rsync \

@@ -46,7 +46,6 @@ RUN set -xe; \
         ca-certificates \
         cmake \
         cron \
-        debconf \
         fcgiwrap \
         findutils \
         git \

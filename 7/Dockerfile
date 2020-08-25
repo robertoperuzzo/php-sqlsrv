@@ -43,7 +43,6 @@ RUN set -xe; \
         apt-transport-https \
         autoconf \
         bzip2 \
-        ca-certificates \
         cmake \
         cron \
         fcgiwrap \
@@ -71,7 +70,6 @@ RUN set -xe; \
         libmcrypt4 \
         libpam-runtime \
         libpng16-16 \
-        libssl1.1 \
         libxml2 \
         libyaml-0-2 \
         libzip4 \
@@ -94,6 +92,7 @@ RUN set -xe; \
         uw-mailutils \
         wget; \
     \
+
     # Debian dev packages needed.
     apt-get update; \
     apt-get install -y --no-install-recommends \
@@ -114,12 +113,12 @@ RUN set -xe; \
         librabbitmq-dev \
         librdkafka-dev \
         libtidy-dev \
-        uuid-dev \
         libwebp-dev \
         libxml2-dev \
         libxslt1-dev \
         libyaml-dev \
-        libzip-dev; \
+        libzip-dev \
+        uuid-dev; \
     \
     docker-php-source extract; \
     \

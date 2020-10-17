@@ -52,6 +52,7 @@ RUN set -xe; \
         gosu \
         gzip \
         imagemagick \
+        jq \
         ldap-utils \
         less \
         libbz2-1.0 \

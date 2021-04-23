@@ -1,9 +1,9 @@
 # PHP Docker Container Images
 
-[![Build Status](https://travis-ci.org/wodby/php.svg?branch=master)](https://travis-ci.org/wodby/php)
-[![Docker Pulls](https://img.shields.io/docker/pulls/wodby/php.svg)](https://hub.docker.com/r/wodby/php)
-[![Docker Stars](https://img.shields.io/docker/stars/wodby/php.svg)](https://hub.docker.com/r/wodby/php)
-[![Docker Layers](https://images.microbadger.com/badges/image/wodby/php.svg)](https://microbadger.com/images/wodby/php)
+[![Build Status](https://travis-ci.org/robertoperuzzo/php-sqlsrv.svg?branch=master)](https://travis-ci.org/robertoperuzzo/php-sqlsrv)
+[![Docker Pulls](https://img.shields.io/docker/pulls/robertoperuzzo/php-sqlsrv.svg)](https://hub.docker.com/r/robertoperuzzo/php-sqlsrv)
+[![Docker Stars](https://img.shields.io/docker/stars/robertoperuzzo/php-sqlsrv.svg)](https://hub.docker.com/r/robertoperuzzo/php-sqlsrv)
+[![Docker Layers](https://images.microbadger.com/badges/image/robertoperuzzo/php-sqlsrv.svg)](https://microbadger.com/images/wodby/php)
 
 ## Table of Contents
 

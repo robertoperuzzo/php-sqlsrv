@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/robertoperuzzo/php-sqlsrv.svg?branch=master)](https://travis-ci.org/robertoperuzzo/php-sqlsrv)
 [![Docker Pulls](https://img.shields.io/docker/pulls/robertoperuzzo/php-sqlsrv.svg)](https://hub.docker.com/r/robertoperuzzo/php-sqlsrv)
 [![Docker Stars](https://img.shields.io/docker/stars/robertoperuzzo/php-sqlsrv.svg)](https://hub.docker.com/r/robertoperuzzo/php-sqlsrv)
-[![Docker Layers](https://images.microbadger.com/badges/image/robertoperuzzo/php-sqlsrv.svg)](https://microbadger.com/images/wodby/php)
+[![Docker Layers](https://images.microbadger.com/badges/image/robertoperuzzo/php-sqlsrv.svg)](https://microbadger.com/images/robertoperuzzo/php-sqlsrv)
 
 ## Table of Contents
 

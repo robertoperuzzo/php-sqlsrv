@@ -1,9 +1,9 @@
 # PHP Docker Container Images
 
-[![Build Status](https://travis-ci.org/wodby/php.svg?branch=master)](https://travis-ci.org/wodby/php)
-[![Docker Pulls](https://img.shields.io/docker/pulls/wodby/php.svg)](https://hub.docker.com/r/wodby/php)
-[![Docker Stars](https://img.shields.io/docker/stars/wodby/php.svg)](https://hub.docker.com/r/wodby/php)
-[![Docker Layers](https://images.microbadger.com/badges/image/wodby/php.svg)](https://microbadger.com/images/wodby/php)
+[![Build Status](https://travis-ci.org/robertoperuzzo/php-sqlsrv.svg?branch=master)](https://travis-ci.org/robertoperuzzo/php-sqlsrv)
+[![Docker Pulls](https://img.shields.io/docker/pulls/robertoperuzzo/php-sqlsrv.svg)](https://hub.docker.com/r/robertoperuzzo/php-sqlsrv)
+[![Docker Stars](https://img.shields.io/docker/stars/robertoperuzzo/php-sqlsrv.svg)](https://hub.docker.com/r/robertoperuzzo/php-sqlsrv)
+[![Docker Layers](https://images.microbadger.com/badges/image/robertoperuzzo/php-sqlsrv.svg)](https://microbadger.com/images/robertoperuzzo/php-sqlsrv)
 
 ## Table of Contents
 
@@ -335,21 +335,9 @@ See https://github.com/wodby/php/issues/22 for more details.
 
 * `files_chown` – in case you manually uploaded files under `wodby` user to files volume and want to change the ownership of those files to `www-data` run `sudo files_chown [FILEPATH]` script (FILEPATH must be under `/mnt/files`), it will recursively change ownership to `www-data:www-data`
 
-## Complete PHP-based stacks
-
-* [wodby/docker4php](https://github.com/wodby/docker4php)
-* [wodby/docker4drupal](https://github.com/wodby/docker4drupal)
-* [wodby/docker4wordpress](https://github.com/wodby/docker4wordpress)
-
 ## Images based on `wodby/php`
 
-* [wodby/drupal-php](https://github.com/wodby/drupal-php)
-* [wodby/wordpress-php](https://github.com/wodby/wordpress-php)
-* [wodby/adminer](https://github.com/wodby/adminer)
-* [wodby/matomo](https://github.com/wodby/matomo)
-* [wodby/cachet](https://github.com/wodby/cachet)
-* [wodby/webgrind](https://github.com/wodby/webgrind)
-* [wodby/xhprof](https://github.com/wodby/xhprof)
+* [wodby/drupal-php-sqlsrv](https://github.com/robertoperuzzo/drupal-php-sqlsrv)
 
 ## Orchestration Actions
 

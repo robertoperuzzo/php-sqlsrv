@@ -40,7 +40,7 @@ RUN set -xe; \
     # Debian packages
     apt-get update; \
     apt-get install -y --no-install-recommends \
-        apt-transport-https \
+        apt-transport-https=1.4.11 \
         autoconf \
         bzip2 \
         cmake \
